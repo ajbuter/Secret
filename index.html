@@ -167,8 +167,9 @@
 
   function noClicked() {
     buttons.style.display = 'none';
-    message.innerText = 'Try again';
+    message.innerText = 'Try again 😉';
 
+    // Broken hearts animation
     for (let i = 0; i < 25; i++) {
       const heart = document.createElement('div');
       heart.className = 'heart';
@@ -178,9 +179,13 @@
       document.body.appendChild(heart);
 
       setTimeout(() => heart.remove(), 3000);
-      setTimeout(5000);
-      history.back()
     }
+
+    // After delay, reset to question
+    setTimeout(() => {
+      message.innerText = 'Will you be my Valentine?';
+      buttons.style.display = 'block';
+    }, 3500);
   }
 </script>
 
