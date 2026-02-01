@@ -160,7 +160,9 @@
 
   /* Transition to Valentine question */
   setTimeout(() => {
+    setTimeout(()=> {
     message.style.opacity = 0; /* Fade out first message */
+    }, 300)
     dropPetals();              /* Start falling petals */
 
     setTimeout(() => {
