@@ -226,13 +226,16 @@
   noBtn.addEventListener('click', moveButton);
 
   function moveButton() {
-    const padding = 20;
+    const paddingX = window.innerWidth * .1;
+    const paddingY = window.innerHeight * .1;
 
-    const maxX = window.innerWidth - noBtn.offsetWidth - padding;
-    const maxY = window.innerHeight - noBtn.offsetHeight - padding;
+    const maxX = window.innerWidth * .8 - noBtn.offsetWidth;
+    const maxY = window.innerHeight * .8 - noBtn.offsetHeight;
 
-    const randomX = Math.random() * maxX;
-    const randomY = Math.random() * maxY;
+    const randomX = paddingX + Math.random() * maxX;
+    const randomY = paddingY + Math.random() * maxY;
+
+    
 
     /* Move button to random spot */
     noBtn.style.transform = `translate(${randomX}px, ${randomY}px)`;
